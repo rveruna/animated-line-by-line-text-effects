@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated text lines</title>
+    <style>
+        body {
+            background: #000;
+            font-family: Helvetica, Arial, sans-serif;
+            color: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="text">
+
+    </div>
+    <script>
+        var block = document.getElementById('text');
+        var words = ["_", "N_", "NO_", "NOBO_", "NOBOD_", "NOBODY_", "NOBOD_", "NOBO_", "NO_", "N_"];
+        var counter = 0;
+        var timer;
+
+        reset();
+
+        function addText() {
+            var content = "";
+            for (i = 0; i < 6; i++) {
+                content += "<p>" + words[i] + "</p>"
+            }
+            block.innerHTML = content;
+            if (counter == 5) {
+                clearInterval(timer);
+                timer = setTimeout(reset, 1000);
+            } else {
+                var temp = words[0];
+                words.splice(0, 1);
+                words.push(temp);
+                counter++;
+            }
+        }
+
+        function reset() {
+            counter = 0;
+            timer = setInterval(addText, 100);
+        }
+
+    </script>
+</body>
+
+</html>
