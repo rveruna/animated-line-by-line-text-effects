@@ -1,3 +1,3 @@
-# Responsive-fullscreen-layouts-with-Flexbox
-Harnessing the power of Flexbox, discover how to create a card that adjusts and centres to the viewport
+# animated line-by-line text effects
+recreate the line-by-line text effect as seen on nobody.nyc
 <img src="https://github.com/rveruna/animated-line-by-line-text-effects/blob/master/ScreenShot.png" width="80%"></img> 
